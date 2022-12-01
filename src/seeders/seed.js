@@ -181,7 +181,6 @@ async function seeding(){
   await forEach(cart, (cart)=> Cart.create(cart))
   await forEach(order, (order)=> Order.create(order))
   await forEach(productInCart, (pic) => ProductInCart.create(pic))
-  await forEach(productInOrder, (pio)=> ProductInOrder.create(pio))
-  
+  await forEach(productInOrder, (pio)=> ProductInOrder.create(pio))  
 };
 seeding();
