@@ -7,9 +7,11 @@ const addToCart = async (req, res, next) =>{
         const {userId} = req.params
         const {productId, quantity} = req.body
         const product = {userId: Number(userId), productId, quantity}
-        console.log("ESTO ES PRODUCT", product);
+        
+        console.log("Aqui esta producto", product);
+
         const result = await CartServices.addProductToCart(product, res)
-        //console.log("ESTO ES RESULT", result);
+        //console.log("muestro productos agregados", result);
 
         res.json(result)
     } catch (error) {
