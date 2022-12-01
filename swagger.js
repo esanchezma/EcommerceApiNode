@@ -36,8 +36,10 @@ const swaggerDocs = (app, port)=>{
         res.setHeader("ContentType", "application/json");
         res.send(swaggerSpec)
     })
-    
-    console.log(`documentacion disponible en http://${DB_HOST}:${port}/api/v1/docs`);
+
+    const HOST = process.env.DB_HOST;
+
+    console.log(`documentacion disponible en http://${HOST}:${port}/api/v1/docs`);
 };
 
 module.exports = swaggerDocs;
